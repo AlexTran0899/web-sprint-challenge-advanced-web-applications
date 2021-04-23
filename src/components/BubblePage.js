@@ -13,20 +13,20 @@ const BubblePage = () => {
     .get('api/colors')
     .then(res => setColorList(res.data))
   }, [refresh])
-  
+
 const deleteAColorfunc = (id)=>{
   setColorList(colorList.filter(item => (item.id !== id)))
   setRefresh(!refresh)
 }
 
   return (
-    <div className="container">
+    <div  data-testid="l123" className="container">
       <ColorList colors={colorList} deleteAColor={deleteAColorfunc}updateColors={setColorList} />
       <Bubbles colors={colorList} />
     </div>
   );
 };
-
+console.log("hello world")
 export default BubblePage;
 
 //Task List:

@@ -9,4 +9,4 @@ const fetchColor = ()=>{
         
     })
 }
-export default fetchColor
+export default fetchColor;
